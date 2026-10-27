@@ -1,0 +1,23 @@
+[package]
+name = "nivra-writer"
+version = "0.2.0"
+edition = "2021"
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.22"
+sha2 = "0.10"
+uuid = { version = "1", features = ["v4"] }
+zip = { version = "9", default-features = false, features = ["deflate"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
+tempfile = "3"
+fs2 = "0.4"
+[target.'cfg(target_os = "linux")'.dependencies]
+webkit2gtk = "2"
+gtk = "0.18"
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2-web-kit = { version = "0.3", features = ["WKWebView"] }

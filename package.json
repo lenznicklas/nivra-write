@@ -1,0 +1,40 @@
+{
+  "name": "nivra-writer",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "build": "npm run check && vite build",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@lucide/svelte": "^1.61.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2",
+    "@tiptap/core": "^3",
+    "@tiptap/extension-highlight": "^3",
+    "@tiptap/extension-image": "^3",
+    "@tiptap/extension-table": "^3",
+    "@tiptap/extension-text-align": "^3",
+    "@tiptap/extension-text-style": "^3",
+    "@tiptap/pm": "^3",
+    "@tiptap/starter-kit": "^3",
+    "svelte": "^5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@tauri-apps/cli": "^2",
+    "@tsconfig/svelte": "^5",
+    "jsdom": "^30.1.3",
+    "prettier": "^3.9.10",
+    "prettier-plugin-svelte": "^4.1.1",
+    "svelte-check": "^4",
+    "typescript": "^5",
+    "vite": "^7.3.7",
+    "vitest": "^5.0.5"
+  }
+}
